@@ -10,4 +10,5 @@ const server = http.createServer((req: any, res: any)=>{
 
 server.listen(port, hostname, () => {
     console.log("Servidor Rodando from ts com live reload!");
+    console.log("Falta acrescentar o express");
 });
