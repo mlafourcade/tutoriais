@@ -1,14 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const http = require('http');
-const hostname = '127.0.0.1';
-const port = 3000;
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Essa e minha Pagina');
+const express = require('express');
+const app = express();
+app.get('/', function (req, res) {
+    res.send('Hello World');
 });
-server.listen(port, hostname, () => {
-    console.log("Servidor Rodando from ts com live reload!");
+const server = app.listen(3001, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log("Example app listening at http://%s:%s", host, port);
 });
 //# sourceMappingURL=index.js.map

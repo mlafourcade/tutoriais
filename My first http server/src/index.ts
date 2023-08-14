@@ -1,14 +1,14 @@
-const http = require('http');
-const hostname = '127.0.0.1';
-const port = 3000;
+import {Request, Response} from 'express';
+const express = require('express');
+const app = express();
 
-const server = http.createServer((req: any, res: any)=>{
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Essa e minha Pagina');
-});
+app.get('/', function (req:Request, res:Response) {
+   res.send('Hello World');
+})
 
-server.listen(port, hostname, () => {
-    console.log("Servidor Rodando from ts com live reload!");
-    console.log("Falta acrescentar o express");
+const server = app.listen(3001, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+
+    console.log("Example app listening at http://%s:%s", host, port);
 });
