@@ -9,6 +9,6 @@ const server = http.createServer((req, res) => {
     res.end('Essa e minha Pagina');
 });
 server.listen(port, hostname, () => {
-    console.log("Servidor Rodando from ts watch!");
+    console.log("Servidor Rodando from ts com live reload!");
 });
 //# sourceMappingURL=index.js.map

@@ -9,5 +9,5 @@ const server = http.createServer((req: any, res: any)=>{
 });
 
 server.listen(port, hostname, () => {
-    console.log("Servidor Rodando from ts!");
+    console.log("Servidor Rodando from ts com live reload!");
 });
